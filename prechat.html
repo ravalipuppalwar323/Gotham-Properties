@@ -1,0 +1,137 @@
+https://thenicole.dev1-redsequoia.com
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Agentforce Chat Test</title>
+ 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+ 
+        header {
+            background: #0070d2;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+ 
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+ 
+        .test-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 90%;
+        }
+ 
+        footer {
+            background: #0070d2;
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            font-size: 0.9rem;
+        }
+ 
+        button {
+            background-color: #0070d2;
+            border: none;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+ 
+        button:hover {
+            background-color: #005fb2;
+        }
+</style>
+</head>
+ 
+<body>
+<header>
+<h1>Agentforce Chat Integration Test</h1>
+</header>
+ 
+    <main>
+<div class="test-section">
+<h2>Test Embedded Messaging</h2>
+<p>Click below to open chat with pre-chat or hidden fields setup.</p>
+<button id="startChatBtn">Start Chat</button>
+</div>
+</main>
+ 
+    <footer>
+&copy; 2025 External Chat Test Site
+</footer>
+ 
+   <1-- <script>
+        // Example: simulate your custom user data (optional)
+        window.addEventListener("onEmbeddedMessagingReady", () => {
+            console.log("Embedded Messaging Ready ");
+ 
+            // Example: set a hidden field dynamically
+            embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
+                "UserType": "External Tester",
+                "Email": "tester@example.com"
+            });
+        });
+ 
+        // You can trigger the chat manually
+        document.getElementById("startChatBtn").addEventListener("click", () => {
+            try {
+                embeddedservice_bootstrap.utilAPI.launchChat();
+            } catch (e) {
+                alert("Chat not ready yet. Please wait or check script load.");
+            }
+        });
+</script>-->
+ 
+    <!-- 🧠 Paste your Salesforce Embedded Service / Messaging bootstrap snippet BELOW this line -->
+<!-- Example (replace with your actual code): -->
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+               embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
+            "Building_Name": lastSegmentCurrentPage
+        });
+			embeddedservice_bootstrap.init(
+				'00DOt00000btlQn',
+				'Gotham_Properties_Agentforce_Messaging_Channel',
+				'https://platform-dev.sandbox.my.site.com/ESWPropertie88587044',
+				{
+					scrt2URL: 'https://platform-dev.sandbox.my.salesforce-scrt.com'
+				}
+			);
+
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://orgfarm-15424e14d8-dev-ed.develop.my.site.com/ESWAgentdeployment1752820471517/assets/js/bootstrap.min.js%27 onload='initEmbeddedMessaging()'></script>
+</body>
+</html>
