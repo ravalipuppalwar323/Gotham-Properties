@@ -1,0 +1,38 @@
+<html>
+<body>
+<h1> Hidden Pre-Chat </h1>
+<script type='text/javascript'>
+function getLastUrlSegment(url) {
+  // Handle cases where the URL might have query parameters
+  // by splitting again on '?' and taking the first part.
+  const path = url.split('?')[0]; 
+  const segments = path.split('/');
+  return segments.pop(); // Returns the last element of the array
+}
+	function initEmbeddedMessaging() {
+		try { 
+			const currentPageUrl = window.location.href;
+			const lastSegmentCurrentPage = getLastUrlSegment(currentPageUrl);
+			console.log(lastSegmentCurrentPage);
+
+		embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+               embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
+            "Building_Name": lastSegmentCurrentPage
+        });
+			embeddedservice_bootstrap.init(
+				'00D',
+				'Gotham_Properties_Agentforce_Messaging_Channel',
+				'https://platform-dev.sandbox.my.site.com/ESWPropertie88587044',
+				{
+					scrt2URL: 'https://platform-dev.sandbox.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://platform-dev.sandbox.my.site.com/ESWPropertie88587044/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
+</body>
+</html>
